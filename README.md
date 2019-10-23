@@ -22,4 +22,4 @@ operadores. O sistema também contará com uma categoria de remedios com e sem r
 ### Nona função:
 #### - Balanceamento de vendas (Quando se deduzir do estoque determinado produto o sistema informará em R$ quanto foi vendido)
 ### Décima função:
-#### - 
+#### - Alterar dados do operador
