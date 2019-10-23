@@ -1,5 +1,7 @@
 # Sistema Farmaceutico 
 
+https://pastebin.com/F9kwPuPw
+
 O sistema consiste em operar o estoque de uma fármacia com adições e remocões de novos produtos além de uma categorização de preços para cada produto, além disso pode-se alterar o preço, a quantidade do estoque, o balanceamento de estoque inserindo diariamente a quantidade vendida e deduzindo isso no estoque. Além disso, o sistema contará com até quatro operadores que serão responsaveis pela manutenção do sistema, cujo estes, poderão ser inseridos e removidos porém com esta quantidade fixa de 4 
 operadores. O sistema também contará com uma categoria de remedios com e sem receiturário!
 
