@@ -21,6 +21,6 @@ operadores. O sistema também contará com uma categoria de remedios com e sem r
 ### Oitava função:
 #### - Descrever se o remédio é com ou sem receituário 
 ### Nona função:
-#### - Balanceamento de vendas (Quando se deduzir do estoque determinado produto o sistema informará em R$ quanto foi vendido)
+#### - Balanceamento de vendas (Dado um preço de compra , o sistema pedirá um preço de venda e deduzirá o lucro)
 ### Décima função:
 #### - Alterar dados do operador
