@@ -19,8 +19,8 @@ operadores. O sistema também contará com uma categoria de remedios com e sem r
 ### Sétima função:
 #### - Controle de estoque (O operador poderá inserir a quantidade de determinado remedio assim como remover quando necessario)
 ### Oitava função:
-#### - Descrever se o remédio é com ou sem receituário 
+#### - Descrever se o remédio é com ou sem receituário (Caso haja receituario o sistema ira solicitar os dados do Médico[Hospital,CRM,Nome]
 ### Nona função:
-#### - Balanceamento de vendas (Dado um preço de compra , o sistema pedirá um preço de venda e deduzirá o lucro)
+#### - Balanceamento de Estoque (Dado um preço de compra , o sistema pedirá um preço de venda e deduzirá o lucro)
 ### Décima função:
 #### - Alterar dados do operador
