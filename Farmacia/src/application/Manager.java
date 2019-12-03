@@ -53,6 +53,57 @@ public class Manager{
     }
     
     public void alterarOperador(){
-        
+        System.out.print("Digite o ID que deseja Buscar para alteração:");
+        String id = input.nextLine();
+        int buscaID = searchId(id);
+        input.nextLine();
+        if(buscaID != -1){
+           System.out.println("O Id pertence ao Sistema");
+           System.out.println("Digite oq deseja alterar\n"+"[1] Alterar o nome\n"+"[2] Alterar o CPF\n");
+           int escolha = input.nextInt();
+           if(escolha ==1){
+               System.out.print("Inserir Nome do Operador:");
+               String name = input.nextLine();
+               operador[buscaID].setName(name);
+           }
+           else if(escolha == 2){
+               System.out.print("Inserir CPF do Operador");
+               String cpf = input.nextLine();
+               boolean verify = validador.Validator(cpf);
+               if(verify == true){
+                   operador[buscaID].setCpf(cpf);
+               }else{
+                   System.out.println("CPF inválido. Tente novamente!");
+                   alterarOperador();
+               }
+           }
+           else{
+               System.out.println("Opção invalida, tente novamente");
+               alterarOperador();
+           }
+           
+        }else{
+            System.out.println("O Id não pertence ao Sistema"+"\nProcure novamente!");
+            alterarOperador();
+        }
+    }
+    public void removerOperador(){
+        int searchId = searchId(id);
+        if(searchId != -1){
+            operador[searchId].setId(null);
+            operador[searchId].setCpf(null);
+            operador[searchId].setName(null);
+        }else{
+            System.out.println("Id invalido, tente novamente");
+            removerOperador();
+        }
+    }
+    public int searchId(String id){
+        for(int i = 0; i < maxQtd; i++){
+            if(operador[i].getId().equals(id)){
+                return i;
+            }
+        }
+        return -1;
     }
 }
