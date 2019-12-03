@@ -3,16 +3,16 @@ package operador;
 public class Operador {
 
     
-    private int id; 
+    private String id; 
     private String name;
-    private int cpf;
+    private String cpf;
     
-    public Operador(int id, String name, int cpf){
+    public Operador(String id, String name, String cpf){
         this.id = id;
         this.name = name;
         this.cpf = cpf;
     }
-    public int getId(){
+    public String getId(){
         return id;
     }
     public String getName(){
@@ -21,10 +21,10 @@ public class Operador {
     public void setName(String name){
         this.name = name;
     }
-    public int getCpf(){
+    public String getCpf(){
         return cpf;
     }
-    public void setCpf(int cpf){
+    public void setCpf(String cpf){
         this.cpf = cpf;
     }
 }

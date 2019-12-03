@@ -34,5 +34,8 @@ public class Receita extends Remedio{
     public void setHospital(String hospital) {
         this.hospital = hospital;
     }
-
+    
+    public String toString(){
+        return "ID: "+crm+"Nome: "+nameMedic+"\nPreço: "+hospital+"\n";
+      }
 }

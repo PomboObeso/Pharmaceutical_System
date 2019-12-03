@@ -14,10 +14,10 @@ public class Estoque {
     this.quantidades = new int[maxQt];
   }
 
-  public void addRemedio(Remedio r, int quantidade) {
-    this.remedios.add(r);
-    this.quantidades[r.getId()] += quantidade;
-    this.idsRemedio[r.getId()] = true;
+  public void addRemedio(Remedio remedio, int quantidade) {
+    this.remedios.add(remedio);
+    this.quantidades[remedio.getId()] += quantidade;
+    this.idsRemedio[remedio.getId()] = true;
   }
 
   public void RemoveRemedioAll(int id) {

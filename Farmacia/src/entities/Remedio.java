@@ -1,6 +1,6 @@
 package entities;
 
-public class Remedio {
+public abstract class Remedio {
     private String nome;
     private Double preco;
     private int id;
@@ -27,6 +27,9 @@ public class Remedio {
   
     public int getId() {
       return this.id;
+    }
+    public String toString(){
+      return "ID: "+id+"Nome: "+nome+"\nPreço: "+preco+"\n";
     }
 
   }
