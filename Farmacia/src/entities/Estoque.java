@@ -13,25 +13,39 @@ public class Estoque {
     this.remedios = new ArrayList<Remedio>();
   }
   public void addRemedio(Remedio remedio, int quantityRemedio){
-    this.remedios.add(remedio);
+    //this.remedios.add(remedio);
     try{
         System.out.print("Insira o ID do Remedio");
-        int id = input.nextInt();
+        String id = input.nextLine();
         input.nextLine();
         System.out.print("Digite o nome do Remedio");
         String name = input.nextLine();
         System.out.print("Digite o preço do Remedio:");
         double price = input.nextDouble();
         input.nextLine();
-
+        System.out.print("Quantidade a ser inserida no estoque:");
+        quantityRemedio = input.nextInt();
+        input.nextLine();
+        boolean verify = getFreeId(id);
+        if(verify == true){
+          System.out.println("Esta ID já esta em uso. Insira uma ID válida!");
+          addRemedio(remedio, quantityRemedio);
+        }else{
+          remedios.add(new Remedio(name,price,id,quantityRemedio));
+        }
     }catch(InputMismatchException error){
 
     }
 
 }
 
-  public void getFreeId(){
-    
+  public boolean getFreeId(String id){
+    for (Remedio element: remedios) {
+      if(element.getId().equals(id)){
+        return true;
+      }
+    }
+    return false;
   }
 
   public void RemoveRemedio(int id ) {

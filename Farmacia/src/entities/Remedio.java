@@ -1,29 +1,30 @@
 package entities;
 //id será independente do do index (podendo ser alterado e removido independente do arraylist) do array list/ ira fazer uma verificação de id livre 
-public abstract class Remedio {
-    private String nome;
-    private double preco;
+public class Remedio {
+    private String name;
+    private double price;
     private String id;
     private int quantityRemedio;
     //private boolean controlador;
   
-    public Remedio(String nome, double preco, String id) {
-      this.nome = nome;
-      this.preco = preco;
+    public Remedio(String name, double price, String id, int quantityRemedio) {
+      this.name = name;
+      this.price = price;
       this.id = id;
+      this.quantityRemedio = quantityRemedio;
       //this.controlador = controlador;
     }
   
     public String getNome() {
-      return this.nome;
+      return this.name;
     }
   
     public double getPreco() {
-      return this.preco;
+      return this.price;
     }
   
-    public void setPreco(double preco) {
-      this.preco = preco;
+    public void setPreco(double price) {
+      this.price = price;
     }
   
     public String getId() {
@@ -36,7 +37,7 @@ public abstract class Remedio {
       this.quantityRemedio = quantityRemedio;
     }
     public String toString(){
-      return "ID: "+id+"Nome: "+nome+"\nPreço: "+preco+"\n";
+      return "ID: "+id+"Nome: "+name+"\nPreço: "+price+"\n";
     }
 
   }
