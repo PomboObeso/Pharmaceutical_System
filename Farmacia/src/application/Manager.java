@@ -1,7 +1,8 @@
 package application;
 
+//import java.util.ArrayList;
+//import java.util.InputMismatchException;
 import java.util.Scanner;
-
 import operador.Operador;
 import entities.Estoque;
 import entities.Remedio;
@@ -106,4 +107,5 @@ public class Manager{
         }
         return -1;
     }
+
 }

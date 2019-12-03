@@ -1,44 +1,41 @@
 package entities;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+import entities.Remedio;
 
 public class Estoque {
-  private static final int maxQt = 1000;
-  private ArrayList<Remedio> remedios;
-  private boolean[] idsRemedio;
-  private int[] quantidades;
+  private ArrayList<Remedio> remedios = new ArrayList<>();
+  Scanner input = new Scanner(System.in);
   
   public Estoque() {
     this.remedios = new ArrayList<Remedio>();
-    this.idsRemedio = new boolean[maxQt];
-    this.quantidades = new int[maxQt];
   }
-
-  public void addRemedio(Remedio remedio, int quantidade) {
+  public void addRemedio(Remedio remedio, int quantityRemedio){
     this.remedios.add(remedio);
-    this.quantidades[remedio.getId()] += quantidade;
-    this.idsRemedio[remedio.getId()] = true;
-  }
+    try{
+        System.out.print("Insira o ID do Remedio");
+        int id = input.nextInt();
+        input.nextLine();
+        System.out.print("Digite o nome do Remedio");
+        String name = input.nextLine();
+        System.out.print("Digite o preço do Remedio:");
+        double price = input.nextDouble();
+        input.nextLine();
 
-  public void RemoveRemedioAll(int id) {
-    for (Remedio r : this.remedios) {
-      if (r.getId() == id) {
-        this.remedios.remove(r);
-        this.idsRemedio[id] = false;
-        this.quantidades[id] = 0;
-      }
+    }catch(InputMismatchException error){
+
     }
+
+}
+
+  public void getFreeId(){
+    
   }
 
   public void RemoveRemedio(int id ) {
     
-  }
-
-  public int getFreeId() {
-    for (int i = 0; i < this.idsRemedio.length; i++) {
-      if (!this.idsRemedio[i]) return i;
-    }
-    return -1;
   }
 
 }

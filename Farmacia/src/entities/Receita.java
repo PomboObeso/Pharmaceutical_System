@@ -7,8 +7,8 @@ public class Receita extends Remedio{
     private int crm;
     private String hospital;
 
-    public Receita(String nome, Double preco, int id, boolean controlador,String nameMedic,int crm, String hospital) {
-        super(nome, preco, id, controlador);
+    public Receita(String nome, double preco, String id,String nameMedic,int crm, String hospital) {
+        super(nome, preco, id);
     }
 
     public String getNameMedic() {
