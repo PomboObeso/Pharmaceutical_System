@@ -34,7 +34,7 @@ public class Estoque {
           remedios.add(new Remedio(name,price,id,quantityRemedio));
         }
     }catch(InputMismatchException error){
-
+      System.out.println("Erro de tipo: Insira os dados corretamente");
     }
 
 }
@@ -49,7 +49,18 @@ public class Estoque {
   }
 
   public void RemoveRemedio(int id ) {
-    
+    try{
+      System.out.println("Remoção de Remedios\n");
+      System.out.print("Insira a quantidade de reemios que deseja remover:");
+      int quantityForRemove = input.nextInt();
+      input.nextLine();
+      for(int i = 0; i < quantityForRemove; i++){
+        String id = input.nextLine();
+        boolean
+      }
+    }catch(InputMismatchException error){
+      System.out.println("Erro de tipo: Insira os dados corretamente");
+    }
   }
 
 }
