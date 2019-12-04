@@ -16,25 +16,25 @@ public class Estoque {
     this.remedios = new ArrayList<Remedio>();
   
   }
-  public void addRemedio(Remedio remedio, int quantityRemedio){
+  public void addRemedio(){
     //this.remedios.add(remedio);
     try{
         
-        System.out.print("Insira o ID do Remedio");
+        System.out.print("Insira o ID do Remedio: ");
         String id = input.nextLine();
-        input.nextLine();
-        System.out.print("Digite o nome do Remedio");
+        //input.nextLine();
+        System.out.print("Digite o nome do Remedio: ");
         String name = input.nextLine();
-        System.out.print("Digite o preço do Remedio:");
+        System.out.print("Digite o preço do Remedio: ");
         double price = input.nextDouble();
         input.nextLine();
-        System.out.print("Quantidade a ser inserida no estoque:");
-        quantityRemedio = input.nextInt();
+        System.out.print("Quantidade a ser inserida no estoque: ");
+        int quantityRemedio = input.nextInt();
         input.nextLine();
         boolean verify = verifyId(id);
-        System.out.println("O Remedio precisa de recetuario?[S/N]");
+        System.out.println("O Remedio precisa de recetuario?[S/N]: ");
         char choose = input.next().charAt(0);
-        
+        input.nextLine();
         if(choose == 'S' || choose == 's'){
           System.out.print("Insira o nome do Médico:");
           String nameMedic = input.nextLine();
@@ -49,7 +49,7 @@ public class Estoque {
         }
         if(verify == true){
           System.out.println("Esta ID já esta em uso. Insira uma ID válida!");
-          addRemedio(remedio, quantityRemedio);
+          addRemedio();
         }else{
           remedios.add(new Remedio(name,price,id,quantityRemedio));
         }
