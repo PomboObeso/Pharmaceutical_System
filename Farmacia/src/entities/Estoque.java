@@ -83,6 +83,7 @@ public class Estoque {
       int quantityForRemove = input.nextInt();
       input.nextLine();
       for(int i = 0; i < quantityForRemove; i++){
+        System.out.print("Insira o ID:");
         String id = input.nextLine();
         boolean verify = verifyId(id);
         if(verify == true){
@@ -139,7 +140,10 @@ public class Estoque {
   }
   public String showEstoque(){
     if(receita == null){
-      return remedios.toString();
+      for (Remedio remedio : remedios) {
+        return remedio.toString();
+      }
+      return null;
     }else{
       return remedios.toString()+"\n"+receita.toString();
     }

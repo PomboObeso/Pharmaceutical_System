@@ -7,9 +7,10 @@ public class Main{
     Estoque estoque = new Estoque();
     estoque.addRemedio();
     estoque.alterarRemedio();
-    estoque.removeRemedio();
-    estoque.balanceamentoDeEstoque();
-    estoque.showEstoque();
+    //estoque.removeRemedio();
+    double total = estoque.balanceamentoDeEstoque();
+    System.out.println("Total em estoque: "+total);
+    System.out.println(estoque.showEstoque());
   
   }     
 }

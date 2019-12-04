@@ -39,7 +39,7 @@ public class Remedio {
       this.quantityRemedio = quantityRemedio;
     }
     public String toString(){
-      return "ID: "+id+"Nome: "+name+"\nPreço: "+price+"\n";
+      return "ID: "+id+ "\nNome: "+name+"\nPreço: "+price+"\n";
     }
 
   }
