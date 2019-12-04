@@ -25,8 +25,8 @@ public class Manager{
             name = input.nextLine();
             System.out.println("DIgite o CPF do Operador");
             cpf = input.nextLine();
-            boolean retorno = validador.Validator(cpf);
-            if(retorno = true){
+            boolean retorno = Validator.validator(cpf);
+            if(retorno == true){
                 System.out.println("CPF aceito com sucesso");
                 int free = getFreeId();
                 if(free != -1){
@@ -70,7 +70,7 @@ public class Manager{
            else if(escolha == 2){
                System.out.print("Inserir CPF do Operador");
                String cpf = input.nextLine();
-               boolean verify = validador.Validator(cpf);
+               boolean verify = Validator.validator(cpf);
                if(verify == true){
                    operador[buscaID].setCpf(cpf);
                }else{

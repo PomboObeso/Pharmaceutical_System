@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "application.Main",
+            "projectName": "Farmacia"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Farmacia",
             "request": "launch",
             "mainClass": "application.Farmacia",
