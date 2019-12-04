@@ -18,7 +18,9 @@ public class Remedio {
     public String getNome() {
       return this.name;
     }
-  
+    public void setName(String name){
+      this.name = name;
+    }
     public double getPreco() {
       return this.price;
     }

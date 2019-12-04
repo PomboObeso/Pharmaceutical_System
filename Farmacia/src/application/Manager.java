@@ -4,9 +4,9 @@ package application;
 //import java.util.InputMismatchException;
 import java.util.Scanner;
 import operador.Operador;
-import entities.Estoque;
-import entities.Remedio;
-import entities.Receita;
+//import entities.Estoque;
+//import entities.Remedio;
+//import entities.Receita;
 import operador.Validator;
 import java.lang.ArrayIndexOutOfBoundsException;
 
