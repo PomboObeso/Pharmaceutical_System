@@ -57,11 +57,13 @@ public class Manager{
         System.out.print("Digite o ID que deseja Buscar para alteração:");
         String id = input.nextLine();
         int buscaID = searchId(id);
-        input.nextLine();
+        //input.nextLine();
         if(buscaID != -1){
            System.out.println("O Id pertence ao Sistema");
-           System.out.println("Digite oq deseja alterar\n"+"[1] Alterar o nome\n"+"[2] Alterar o CPF\n");
+           System.out.println("Digite oq deseja alterar\n"+"[1] Alterar o nome\n"+"[2] Alterar o CPF");
+           System.out.println("OPÇÃO:");
            int escolha = input.nextInt();
+           input.nextLine();
            if(escolha ==1){
                System.out.print("Inserir Nome do Operador:");
                String name = input.nextLine();
@@ -89,15 +91,19 @@ public class Manager{
         }
     }
     public void removerOperador(){
+        System.out.print("Insira o ID do Operador:");
+        String id = input.nextLine();
         int searchId = searchId(id);
         if(searchId != -1){
             operador[searchId].setId(null);
             operador[searchId].setCpf(null);
             operador[searchId].setName(null);
+            System.out.println("OPERADOR REMOVIDO COM SUCESSO!");
         }else{
             System.out.println("Id invalido, tente novamente");
             removerOperador();
         }
+        
     }
     public int searchId(String id){
         for(int i = 0; i < maxQtd; i++){

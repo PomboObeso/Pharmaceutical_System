@@ -17,9 +17,10 @@ public class Menu{
         "[4]Adicionar Remedio\n"+
         "[5]Alterar Remedio\n"+
         "[6]Remover Remedio\n"+
-        "[7]Mostrar Balanceamento de Estoque"+
+        "[7]Mostrar Balanceamento de Estoque\n"+
         "[8]Listar Itens do Estoque\n");
         try{
+            System.out.print("OPÇÃO:");
             int choose = input.nextInt();
 
             if(choose == 1){
