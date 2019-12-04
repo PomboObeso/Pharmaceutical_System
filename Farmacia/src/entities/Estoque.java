@@ -6,15 +6,20 @@ import java.util.Scanner;
 import entities.Remedio;
 
 public class Estoque {
+  
   private ArrayList<Remedio> remedios = new ArrayList<>();
+  private Receita receita;
   Scanner input = new Scanner(System.in);
   
   public Estoque() {
+    
     this.remedios = new ArrayList<Remedio>();
+  
   }
   public void addRemedio(Remedio remedio, int quantityRemedio){
     //this.remedios.add(remedio);
     try{
+        
         System.out.print("Insira o ID do Remedio");
         String id = input.nextLine();
         input.nextLine();
@@ -27,6 +32,21 @@ public class Estoque {
         quantityRemedio = input.nextInt();
         input.nextLine();
         boolean verify = verifyId(id);
+        System.out.println("O Remedio precisa de recetuario?[S/N]");
+        char choose = input.next().charAt(0);
+        
+        if(choose == 'S' || choose == 's'){
+          System.out.print("Insira o nome do Médico:");
+          String nameMedic = input.nextLine();
+          System.out.print("Insira seu respectivo CRM:");
+          int crm = input.nextInt();
+          input.nextLine();
+          System.out.print("Insira o Hospital que emitiu a receita:");
+          String hospital = input.nextLine();
+          receita = new Receita(name, price, quantityRemedio, id, nameMedic, crm, hospital);
+        }else{
+
+        }
         if(verify == true){
           System.out.println("Esta ID já esta em uso. Insira uma ID válida!");
           addRemedio(remedio, quantityRemedio);
@@ -108,6 +128,20 @@ public class Estoque {
       }
     }catch(InputMismatchException error){
       System.out.println("Erro de tipo: Insira os dados corretamente!");
+    }
+  }
+  public double balanceamentoDeEstoque(){
+    double sum = 0;
+    for (Remedio remedio : remedios) {
+      sum+= remedio.getPreco() * remedio.getQuantityRemedio();
+    }
+    return sum;
+  }
+  public String showEstoque(){
+    if(receita == null){
+      return remedios.toString();
+    }else{
+      return remedios.toString()+"\n"+receita.toString();
     }
   }
 

@@ -3,12 +3,16 @@ package entities;
 import entities.Remedio;
 
 public class Receita extends Remedio{
+
     private String nameMedic;
     private int crm;
     private String hospital;
 
     public Receita(String name, double price,int quantityRemedio, String id,String nameMedic,int crm, String hospital) {
         super(name, price, id,quantityRemedio);
+        this.nameMedic = nameMedic;
+        this.crm = crm;
+        this.hospital = hospital;
     }
 
     public String getNameMedic() {
