@@ -30,6 +30,8 @@ operadores. O sistema também contará com uma categoria de remedios com e sem r
 
 
 
-#### Programa feito e compilado com o Java Extension Pack do Visual Studio Code
-#### Versão do JDK 11.04
-#### Modo de execução: após o clone/download, instalar a extensão acima no VSCode e rodar o código atráves da Classe Main.
+Programa feito e compilado com o Java Extension Pack do Visual Studio Code
+
+Versão do JDK 11.04
+
+Modo de execução: após o clone/download, instalar a extensão acima no VSCode e rodar o código atráves da Classe Main.
