@@ -1,3 +1,5 @@
+
+
 # Sistema Farmaceutico 
 
 
@@ -24,3 +26,7 @@ operadores. O sistema também contará com uma categoria de remedios com e sem r
 #### - Balanceamento de Estoque (Dado um preço de compra , o sistema pedirá um preço de venda e deduzirá o lucro)
 ### Décima função:
 #### - Alterar dados do operador
+
+Programa feito e compilado com o Java Extension Pack do Visual Studio Code
+Verão do JDK 11.04
+Modo de execução: após o clone/download, instalar a extensão acima no VSCode e rodar o código atráves da Classe Main.
